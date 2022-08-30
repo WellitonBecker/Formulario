@@ -1,0 +1,49 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+
+#div_site {
+    width: 100vw;
+    height: 100vh;
+    background: #9daec0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#div_principal {
+    width: auto;
+    height: auto;
+    background: #fff;
+    padding: 30px;
+}
+
+#td_label {
+    text-align: right;
+}
+
+#radio_estrangeiro {
+    margin-left: 70px;
+}
+
+label,input {
+    padding: 10px;
+    font-size: 15pt;
+}
+
+input {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12pt;
+}
+
+td {
+    padding: 3px;
+}
+
+#botao_enviar{
+    margin-top: 35px;
+    padding: 10px;
+}
