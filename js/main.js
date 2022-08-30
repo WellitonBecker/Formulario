@@ -57,7 +57,7 @@ Main.prototype.getCampos = function(){
             'width':'150px'
         },
         {
-            'type':'texto',
+            'type':'number',
             'name':'cep',
             'title':'CEP',
             'length': 8,
@@ -88,6 +88,26 @@ Main.prototype.getCampos = function(){
             'name':'dataNascimento',
             'title':'Data de Nascimento',   
             'width':'150px'
+        },
+        {
+            'type':'lista',
+            'name':'regiao',
+            'title':'Região',   
+            'width':'400px',
+            'lista': [
+                {
+                    'value':1,
+                    'title':'Sul',
+                },
+                {
+                    'value':2,
+                    'title':'Sudeste',
+                },
+                {
+                    'value':3,
+                    'title':'Norte',
+                }
+            ]
         },
         {
             'type':'submit',

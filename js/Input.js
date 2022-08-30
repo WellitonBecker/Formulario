@@ -17,6 +17,8 @@ Input.prototype.getElemento = function(){
 Input.prototype.criaElemento = function (){
     if(this.type === 'radio'){
         this.criaInputRadio();
+    } else if(this.type === 'lista'){
+        this.criaLista();
     } else {
         let oElemento = document.createElement('input'),
             oTitulo   = document.createTextNode(this.title); 
@@ -52,6 +54,27 @@ Input.prototype.criaInputRadio = function() {
         this.elemento.push(oLabel.getElemento());
     });
     
+};
+
+Input.prototype.criaLista = function (){
+    var oElemento    = document.createElement('select'),
+        oPlaceholder = document.createElement('option'),
+        oTextoPlace  = document.createTextNode('Selecione...'); 
+
+    oPlaceholder.appendChild(oTextoPlace);
+    oElemento.appendChild(oPlaceholder);
+    this.lista.forEach(element => {
+        let oOption = document.createElement('option'),
+            oTexto  = document.createTextNode(element.title); 
+
+        oOption.setAttribute('value', element.value);
+        oOption.setAttribute('title', element.title);
+
+        oOption.appendChild(oTexto);
+        oElemento.appendChild(oOption);
+    });
+
+    this.elemento = oElemento;
 };
 
 Input.prototype.width = function (iValor){

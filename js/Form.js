@@ -43,7 +43,7 @@ Form.prototype.criaComponentes = function(aComponentes){
             oLabel = new Label(element.title, element.name, 'label_form', 'label'),
             oInput = new Input(element.title, element.type, element.name);
 
-        if(element.type === 'radio'){
+        if(element.type === 'radio' || element.type === 'lista'){
             oInput.lista = element.lista;
         }
         if(element.class !== undefined){
